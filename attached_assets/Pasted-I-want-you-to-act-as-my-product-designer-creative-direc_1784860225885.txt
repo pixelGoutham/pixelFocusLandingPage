@@ -1,0 +1,173 @@
+I want you to act as my product designer, creative director, UX designer and frontend engineer.
+
+We are not building just another landing page.
+
+We are building the public face of my product.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ABOUT THE PRODUCT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Product Name:
+Pixel Focus
+
+Tagline:
+Focus. Study. Achieve.
+
+Pixel Focus is a premium cross-platform productivity application built specifically for students.
+
+It is available on:
+
+• Windows
+• Linux
+• Android
+
+(macOS and iPhone coming later.)
+
+It is NOT another Pomodoro timer.
+
+It combines:
+
+• Dashboard
+• Calendar
+• Tasks
+• Study Planner
+• Analytics
+• Pomodoro
+• Stopwatch
+• Mock Tests
+• Ambient Music
+• Eisenhower Matrix
+
+Everything works together as one ecosystem.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THE BIGGEST MISTAKE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Do NOT build another generic SaaS website.
+
+I don't want:
+
+• generic gradients
+• generic feature cards
+• fake testimonials
+• AI generated copy
+• huge feature grids
+• startup buzzwords
+• boring corporate language
+
+I have already seen websites like that.
+
+They are forgettable.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHAT I WANT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+I want visitors to immediately understand that Pixel Focus was built FOR STUDENTS.
+
+Not businesses.
+
+Not companies.
+
+Not teams.
+
+Students.
+
+The website should feel calm, confident and premium.
+
+Minimal, but not empty.
+
+Beautiful, but not flashy.
+
+Modern, but with personality.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+THE BRAND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Pixel Focus should feel like:
+
+"The command center for ambitious students."
+
+Not just another productivity app.
+
+The website should make students think:
+
+"This app understands exactly how I study."
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+COPY STYLE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Don't write generic marketing.
+
+Write memorable lines.
+
+Examples of the feeling I want:
+
+"Stop managing your study life."
+
+"Start mastering it."
+
+"Open one app. Close ten tabs."
+
+"Your future isn't built in one night."
+
+"It's built every day."
+
+"Less planning."
+
+"More progress."
+
+"Built for students who actually care."
+
+I want this level of confidence.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Dark theme.
+
+Almost black.
+
+White typography.
+
+Yellow accent.
+
+Large screenshots.
+
+Huge typography.
+
+Lots of whitespace.
+
+Beautiful spacing.
+
+The application itself should be the hero.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MOST IMPORTANT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Before writing ANY code...
+
+I want you to think like a creative agency.
+
+Do NOT start coding.
+
+First create:
+
+1. Brand direction
+2. Website concept
+3. Storytelling flow
+4. Information architecture
+5. Hero section concept
+6. Copywriting direction
+7. Animation ideas
+8. Why visitors will remember this website
+
+Explain your creative vision first.
+
+Once I approve the direction, only then start building.
