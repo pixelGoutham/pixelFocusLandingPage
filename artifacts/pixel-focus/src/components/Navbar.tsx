@@ -38,12 +38,12 @@ export default function Navbar() {
           transition={{ duration: 0.35, ease: "easeOut" }}
           style={{
             position: "fixed",
-            top: "20px",
-            left: "50%",
-            transform: "translateX(-50%)",
+            top: "16px",
+            left: "16px",
+            right: "16px",
             zIndex: 1000,
-            width: "calc(100% - 40px)",
             maxWidth: "860px",
+            margin: "0 auto",
           }}
           data-testid="navbar"
         >
@@ -80,7 +80,6 @@ export default function Navbar() {
             {/* Nav links — desktop only */}
             <div
               style={{
-                display: "flex",
                 gap: "32px",
                 alignItems: "center",
               }}
