@@ -100,7 +100,7 @@ export default function ThePromise() {
               letterSpacing: "0.01em",
             }}
           >
-            Download. It's free.
+            The command center you've been waiting for.
           </p>
 
           {/* Platform download buttons */}

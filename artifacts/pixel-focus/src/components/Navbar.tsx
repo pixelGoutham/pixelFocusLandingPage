@@ -133,7 +133,7 @@ export default function Navbar() {
                 whiteSpace: "nowrap",
               }}
             >
-              Get it free
+              Download
             </button>
           </div>
         </motion.nav>

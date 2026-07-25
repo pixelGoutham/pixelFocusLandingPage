@@ -256,7 +256,7 @@ export default function Hero() {
             cursor: "pointer",
           }}
         >
-          Download Free
+          Download
         </motion.button>
       </div>
 
