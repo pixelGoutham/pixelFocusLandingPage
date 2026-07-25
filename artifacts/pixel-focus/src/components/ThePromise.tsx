@@ -100,7 +100,7 @@ export default function ThePromise() {
               letterSpacing: "0.01em",
             }}
           >
-            The command center you've been waiting for.
+            Zero tabs. Zero planners. Zero excuses.
           </p>
 
           {/* Platform download buttons */}

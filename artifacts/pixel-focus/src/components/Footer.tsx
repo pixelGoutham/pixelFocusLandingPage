@@ -96,7 +96,7 @@ export default function Footer() {
             fontWeight: 500,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
-            color: "#2e2e2e",
+            color: "#555555",
           }}
           data-testid="footer-tagline"
         >
@@ -120,7 +120,7 @@ export default function Footer() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "11px",
-            color: "#2a2a2a",
+            color: "#666666",
           }}
           data-testid="footer-copyright"
         >
@@ -130,7 +130,7 @@ export default function Footer() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "10px",
-            color: "#222222",
+            color: "#555555",
             letterSpacing: "0.08em",
           }}
         >

@@ -34,15 +34,15 @@ export default function Problem() {
         >
           You have ten tabs open.
           <br />
-          <span style={{ color: "#555555" }}>Three planners.</span>
+          <span style={{ color: "#999999" }}>Three planners.</span>
           <br />
-          <span style={{ color: "#333333" }}>One deadline.</span>
+          <span style={{ color: "#777777" }}>One deadline.</span>
           <br />
           <span
             style={{
               fontFamily: "'Playfair Display', serif",
               fontStyle: "italic",
-              color: "#222222",
+              color: "#555555",
               fontWeight: 700,
             }}
           >
@@ -50,39 +50,6 @@ export default function Problem() {
           </span>
         </motion.p>
 
-        {/* Separator line */}
-        <motion.div
-          initial={{ scaleX: 0, opacity: 0 }}
-          whileInView={{ scaleX: 1, opacity: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          style={{
-            width: "clamp(60px, 15vw, 120px)",
-            height: "1px",
-            background: "#CDFF00",
-            margin: "44px auto",
-            transformOrigin: "left center",
-          }}
-        />
-
-        {/* Resolution */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          style={{
-            fontFamily: "'Inter', sans-serif",
-            fontSize: "clamp(18px, 3vw, 32px)",
-            fontWeight: 700,
-            color: "#ffffff",
-            letterSpacing: "-0.02em",
-            margin: 0,
-          }}
-          data-testid="problem-resolution"
-        >
-          There is a better way.
-        </motion.p>
       </div>
     </section>
   );

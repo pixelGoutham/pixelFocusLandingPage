@@ -16,7 +16,7 @@ function HeroH1() {
   return (
     <h1
       style={{
-        fontSize: "clamp(34px, 5.5vw, 72px)",
+        fontSize: "clamp(42px, 7vw, 96px)",
         lineHeight: 1.08,
         letterSpacing: "-0.035em",
         fontWeight: 900,
@@ -75,10 +75,10 @@ export default function Hero() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         position: "relative",
         overflow: "hidden",
-        padding: "100px 24px 60px",
+        padding: "clamp(120px, 18vh, 200px) 24px 80px",
         background: "#080808",
       }}
       data-testid="hero-section"
@@ -114,31 +114,6 @@ export default function Hero() {
           width: "100%",
         }}
       >
-        {/* Version badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.02 }}
-          style={{ marginBottom: "12px" }}
-        >
-          <span
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: "10px",
-              fontWeight: 600,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "#333333",
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.07)",
-              borderRadius: "999px",
-              padding: "4px 12px",
-            }}
-          >
-            v1.0 — Now Available
-          </span>
-        </motion.div>
-
         {/* Label */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -203,7 +178,7 @@ export default function Hero() {
           }}
           data-testid="hero-subline"
         >
-          Pixel Focus brings everything together — so your brain doesn't have to.
+          Ten tools. One place. One less reason to quit.
         </motion.p>
 
         {/* Platform pills */}
