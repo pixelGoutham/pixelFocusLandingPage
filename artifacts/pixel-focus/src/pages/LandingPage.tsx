@@ -6,7 +6,6 @@ import AppReveal from "../components/AppReveal";
 import Ecosystem from "../components/Ecosystem";
 import Platforms from "../components/Platforms";
 import ThePromise from "../components/ThePromise";
-import Donate from "../components/Donate";
 import Footer from "../components/Footer";
 
 export default function LandingPage() {
@@ -27,7 +26,6 @@ export default function LandingPage() {
       <Ecosystem />
       <Platforms />
       <ThePromise />
-      <Donate />
       <Footer />
     </div>
   );

@@ -66,7 +66,7 @@ export default function Platforms() {
             margin: 0,
           }}
         >
-          Your platform. Your terms.
+          Wherever you study.
         </h2>
       </motion.div>
 

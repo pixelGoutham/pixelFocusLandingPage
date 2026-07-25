@@ -16,30 +16,30 @@ function HeroH1() {
   return (
     <h1
       style={{
-        fontSize: "clamp(42px, 7vw, 88px)",
-        lineHeight: 1.05,
+        fontSize: "clamp(34px, 5.5vw, 72px)",
+        lineHeight: 1.08,
         letterSpacing: "-0.035em",
         fontWeight: 900,
         fontFamily: "'Inter', sans-serif",
         color: "#ffffff",
-        margin: "0 0 28px",
-        maxWidth: "900px",
+        margin: "0 0 24px",
+        maxWidth: "860px",
         textAlign: "center",
       }}
     >
       {allWords.map((word, i) => (
         <motion.span
           key={i}
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            duration: 0.55,
-            delay: 0.15 + i * 0.08,
+            duration: 0.45,
+            delay: 0.1 + i * 0.05,
             ease: [0.22, 1, 0.36, 1],
           }}
           style={{
             display: "inline-block",
-            marginRight: word.text === "owning" ? "0.28em" : "0.28em",
+            marginRight: "0.28em",
             fontFamily: word.italic
               ? "'Playfair Display', serif"
               : "'Inter', sans-serif",
@@ -78,7 +78,7 @@ export default function Hero() {
         justifyContent: "center",
         position: "relative",
         overflow: "hidden",
-        padding: "120px 24px 80px",
+        padding: "100px 24px 60px",
         background: "#080808",
       }}
       data-testid="hero-section"
@@ -114,6 +114,31 @@ export default function Hero() {
           width: "100%",
         }}
       >
+        {/* Version badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.02 }}
+          style={{ marginBottom: "12px" }}
+        >
+          <span
+            style={{
+              fontFamily: "'Inter', sans-serif",
+              fontSize: "10px",
+              fontWeight: 600,
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "#333333",
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.07)",
+              borderRadius: "999px",
+              padding: "4px 12px",
+            }}
+          >
+            v1.0 — Now Available
+          </span>
+        </motion.div>
+
         {/* Label */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -123,7 +148,7 @@ export default function Hero() {
             display: "inline-flex",
             alignItems: "center",
             gap: "8px",
-            marginBottom: "32px",
+            marginBottom: "24px",
           }}
         >
           <span
@@ -164,17 +189,17 @@ export default function Hero() {
 
         {/* Sub line */}
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          transition={{ duration: 0.5, delay: 0.38 }}
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontSize: "clamp(15px, 2vw, 19px)",
+            fontSize: "clamp(14px, 1.8vw, 17px)",
             fontWeight: 400,
             lineHeight: 1.65,
             color: "#888888",
-            maxWidth: "480px",
-            margin: "0 0 52px",
+            maxWidth: "460px",
+            margin: "0 0 28px",
           }}
           data-testid="hero-subline"
         >
@@ -183,15 +208,15 @@ export default function Hero() {
 
         {/* Platform pills */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.05 }}
+          transition={{ duration: 0.5, delay: 0.48 }}
           style={{
             display: "flex",
             flexWrap: "wrap",
-            gap: "10px",
+            gap: "8px",
             justifyContent: "center",
-            marginBottom: "32px",
+            marginBottom: "20px",
           }}
         >
           {platforms.map(({ icon: Icon, label, href }) => (
@@ -237,9 +262,9 @@ export default function Hero() {
 
         {/* CTA */}
         <motion.button
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          transition={{ duration: 0.45, delay: 0.56 }}
           onClick={scrollToPlatforms}
           className="cta-btn"
           data-testid="hero-cta"
@@ -248,7 +273,7 @@ export default function Hero() {
             color: "#080808",
             border: "none",
             borderRadius: "999px",
-            padding: "15px 40px",
+            padding: "14px 38px",
             fontFamily: "'Inter', sans-serif",
             fontSize: "15px",
             fontWeight: 700,

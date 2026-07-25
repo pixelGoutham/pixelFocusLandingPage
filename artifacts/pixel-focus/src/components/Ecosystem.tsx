@@ -9,42 +9,30 @@ const features = [
   },
   {
     num: "02",
-    name: "Calendar",
-    headline: "Your schedule, your rules.",
-    body: "Every exam, every session. Never miss a beat.",
-  },
-  {
-    num: "03",
     name: "Tasks",
     headline: "Stop making lists. Start finishing them.",
     body: "Tasks that move with your day, not against it.",
   },
   {
-    num: "04",
-    name: "Study Planner",
-    headline: "Plan like a strategist.",
-    body: "Built around how students actually think and prepare.",
-  },
-  {
-    num: "05",
+    num: "03",
     name: "Analytics",
     headline: "Know how you study. Study better.",
     body: "Data on your focus, your sessions, your growth.",
   },
   {
-    num: "06",
+    num: "04",
     name: "Focus Timer",
     headline: "Sprint. Recover. Repeat.",
     body: "Pomodoro and stopwatch, together, finally done right.",
   },
   {
-    num: "07",
+    num: "05",
     name: "Mock Tests",
     headline: "Test yourself before the exam does.",
     body: "Practice under real pressure. Build real confidence.",
   },
   {
-    num: "08",
+    num: "06",
     name: "Ambient Music",
     headline: "The right sound changes everything.",
     body: "Curated focus audio, inside the app.",
@@ -291,7 +279,7 @@ export default function Ecosystem() {
               letterSpacing: "-0.02em",
             }}
           >
-            Eight tools. One mind.
+            Six tools. One mind.
           </span>
         </motion.div>
       </div>
