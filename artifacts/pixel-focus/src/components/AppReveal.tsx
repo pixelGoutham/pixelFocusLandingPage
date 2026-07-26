@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import dashboardScreenshot from "../assets/dashboard-screenshot.png";
+import dashboardScreenshot from "../assets/screen-dashboard.png";
 
 export default function AppReveal() {
   return (
