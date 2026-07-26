@@ -100,7 +100,7 @@ export default function ThePromise() {
               letterSpacing: "0.01em",
             }}
           >
-            Zero tabs. Zero planners. Zero excuses.
+            One app. No subscriptions. No excuses.
           </p>
 
           {/* Platform download buttons */}

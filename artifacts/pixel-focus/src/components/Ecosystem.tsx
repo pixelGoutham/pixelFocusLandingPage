@@ -10,43 +10,43 @@ const features = [
   {
     num: "01",
     name: "Dashboard",
-    headline: "See everything. Decide faster.",
-    body: "Your entire study life on one screen.",
+    headline: "Everything at a glance. Nothing wasted.",
+    body: "Study time, tasks, streaks, and today's schedule — all on one screen before you open a single textbook.",
     img: screenDashboard,
   },
   {
     num: "02",
     name: "Tasks",
-    headline: "Stop making lists. Start finishing them.",
-    body: "Tasks that move with your day, not against it.",
+    headline: "Your to-do list, without the second app.",
+    body: "Filter by subject, priority, or deadline. Add tasks in seconds. Stop losing track of what actually needs to happen today.",
     img: screenTasks,
   },
   {
     num: "03",
     name: "Analytics",
-    headline: "Know how you study. Study better.",
-    body: "Data on your focus, your sessions, your growth.",
+    headline: "Most students study a lot. Few study smart.",
+    body: "See exactly where your hours are going — by subject, by week, by session. The 28-day heatmap doesn't lie.",
     img: screenAnalytics,
   },
   {
     num: "04",
     name: "Focus Timer",
     headline: "Sprint. Recover. Repeat.",
-    body: "Pomodoro and stopwatch, together, finally done right.",
+    body: "Pomodoro with custom durations up to 90 minutes, plus a stopwatch when you just need to log raw time. Both track to the same analytics.",
     img: screenPomodoro,
   },
   {
     num: "05",
     name: "Mock Tests",
     headline: "Test yourself before the exam does.",
-    body: "Practice under real pressure. Build real confidence.",
+    body: "Log every practice test result. Track your average over time. Know which subjects need more reps before it's too late.",
     img: screenMockTests,
   },
   {
     num: "06",
     name: "Ambient Music",
-    headline: "The right sound changes everything.",
-    body: "Curated focus audio, inside the app.",
+    headline: "Rain, café, or white noise — your call.",
+    body: "Nine built-in ambient sounds generated offline. Paste a YouTube link for anything else. No new subscriptions.",
     img: screenMusic,
   },
 ];
@@ -219,7 +219,7 @@ export default function Ecosystem() {
               margin: 0,
             }}
           >
-            The Ecosystem
+            What's inside
           </h2>
           <span
             style={{
@@ -231,7 +231,7 @@ export default function Ecosystem() {
               letterSpacing: "-0.02em",
             }}
           >
-            Six tools. One mind.
+            Ten tools. Already built.
           </span>
         </motion.div>
       </div>
