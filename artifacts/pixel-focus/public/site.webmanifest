@@ -1,0 +1,16 @@
+{
+  "name": "Pixel Focus",
+  "short_name": "Pixel Focus",
+  "description": "The all-in-one study app for students. Dashboard, Tasks, Analytics, Pomodoro, Mock Tests, and Ambient Music — all in one place.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#CDFF00",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}
