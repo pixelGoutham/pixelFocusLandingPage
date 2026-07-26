@@ -308,3 +308,11 @@
 .marquee-container {
   overflow: hidden;
 }
+
+/* Mobile: hero should not force full viewport height */
+@media (max-width: 768px) {
+  #hero {
+    min-height: auto !important;
+    padding-bottom: 64px !important;
+  }
+}
