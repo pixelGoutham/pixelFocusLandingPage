@@ -39,11 +39,6 @@ This repository contains only the **landing page** that markets and links to the
 | Resource | URL |
 |---|---|
 | Production website | https://pixel-focus-meow.vercel.app |
-| Windows download | [Google Drive](https://drive.google.com/file/d/1CaZsuIty3CU9Jj3P-WIb13qnnBo8kPic/view?usp=sharing) |
-| Linux download | [Google Drive](https://drive.google.com/file/d/1YqD2qvedqHKM1Pvc99YBOGOEWjblrfoj/view?usp=drive_link) |
-| Android download | [Google Drive](https://drive.google.com/file/d/1lKYQ9wCUWeA6jMYMALaaqYw-tXGF9xEQ/view?usp=sharing) |
-| Desktop app repository | _(link to be added)_ |
-
 ---
 
 ## What the Landing Page Covers
@@ -78,16 +73,19 @@ These are the Pixel Focus product features the landing page describes and illust
 
 > Add screenshots of the live landing page here. Recommended dimensions: 1440×900 for desktop, 390×844 for mobile.
 
-**Desktop — Hero**
-`<!-- ./docs/screenshots/hero-desktop.png -->`
+## Screenshots
 
-**Desktop — Ecosystem**
-`<!-- ./docs/screenshots/ecosystem-desktop.png -->`
+### Hero
 
-**Mobile — Hero**
-`<!-- ./docs/screenshots/hero-mobile.png -->`
+![Pixel Focus Hero](images/hero.png)
 
----
+### Features / Marquee
+
+![Pixel Focus Features](images/marq.png)
+
+### Footer
+
+![Pixel Focus Footer](images/foot.png)
 
 ## Technology Stack
 
