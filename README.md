@@ -71,10 +71,6 @@ These are the Pixel Focus product features the landing page describes and illust
 
 ## Screenshots
 
-> Add screenshots of the live landing page here. Recommended dimensions: 1440×900 for desktop, 390×844 for mobile.
-
-## Screenshots
-
 ### Hero
 
 ![Pixel Focus Hero](images/hero.png)
