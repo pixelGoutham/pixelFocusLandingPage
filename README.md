@@ -325,8 +325,7 @@ Realistic near-term improvements for this landing page:
 
 ## License
 
-_(License to be added)_
-
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ---
 
 ## Acknowledgements
