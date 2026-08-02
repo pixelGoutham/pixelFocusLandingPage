@@ -71,15 +71,9 @@ These are the Pixel Focus product features the landing page describes and illust
 
 ## Screenshots
 
-### Hero
-
 ![Pixel Focus Hero](images/hero.png)
 
-### Features / Marquee
-
 ![Pixel Focus Features](images/marq.png)
-
-### Footer
 
 ![Pixel Focus Footer](images/foot.png)
 
