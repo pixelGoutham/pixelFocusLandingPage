@@ -316,7 +316,6 @@ Realistic near-term improvements for this landing page:
 
 - Add `robots.txt` and a `sitemap.xml` to improve crawlability.
 - Audit and implement `prefers-reduced-motion` for all Framer Motion animations.
-- Replace Google Drive download links with a proper release page or CDN once distribution infrastructure is in place.
 - Add macOS and iOS platform cards when those builds ship.
 - Implement an Open Graph image for consistent link previews across social platforms.
 - Evaluate whether static site generation (SSG) or a meta framework would improve SEO compared to the current client-rendered approach.
