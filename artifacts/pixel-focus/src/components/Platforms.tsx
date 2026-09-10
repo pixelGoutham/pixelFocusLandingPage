@@ -39,7 +39,7 @@ export default function Platforms() {
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ type: "spring", damping: 20, stiffness: 150 }}
         style={{ textAlign: "center", marginBottom: "64px" }}
       >
         <span
@@ -85,12 +85,9 @@ export default function Platforms() {
             key={name}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -4, borderColor: "rgba(205,255,0,0.2)" }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{
-              duration: 0.55,
-              delay: i * 0.1,
-              ease: [0.22, 1, 0.36, 1],
-            }}
+            transition={{ type: "spring", damping: 20, stiffness: 150 }}
             data-testid={`platform-card-${name.toLowerCase()}`}
             style={{
               background: "#0F0F0F",
@@ -101,11 +98,6 @@ export default function Platforms() {
               flexDirection: "column",
               gap: "20px",
               cursor: "default",
-              transition: "border-color 200ms ease, transform 200ms ease",
-            }}
-            whileHover={{
-              y: -4,
-              borderColor: "rgba(205,255,0,0.2)",
             }}
           >
             <div
@@ -147,11 +139,11 @@ export default function Platforms() {
               </div>
             </div>
 
-            <a
+            <motion.a
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="cta-btn"
+              whileTap={{ scale: 0.97 }}
               data-testid={`download-btn-${name.toLowerCase()}`}
               style={{
                 display: "inline-block",
@@ -170,7 +162,7 @@ export default function Platforms() {
               }}
             >
               Download
-            </a>
+            </motion.a>
           </motion.div>
         ))}
       </div>
@@ -180,7 +172,7 @@ export default function Platforms() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+        transition={{ type: "spring", damping: 20, stiffness: 150, delay: 0.4 }}
         style={{
           textAlign: "center",
           marginTop: "40px",

@@ -35,7 +35,7 @@ export default function Navbar() {
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
+          transition={{ type: "spring", damping: 10, stiffness: 100 }} // Approximately damping 1, response 0.35
           style={{
             position: "fixed",
             top: "16px",
@@ -92,6 +92,15 @@ export default function Navbar() {
               ].map((link) => (
                 <button
                   key={link.id}
+                  onPointerDown={(e) => {
+                    e.currentTarget.style.color = "#ffffff";
+                  }}
+                  onPointerUp={(e) => {
+                    e.currentTarget.style.color = "#888888";
+                  }}
+                  onPointerCancel={(e) => {
+                    e.currentTarget.style.color = "#888888";
+                  }}
                   onClick={() => scrollTo(link.id)}
                   data-testid={`nav-link-${link.id}`}
                   style={{
@@ -103,11 +112,9 @@ export default function Navbar() {
                     fontWeight: 500,
                     letterSpacing: "0.01em",
                     cursor: "pointer",
-                    transition: "color 150ms ease",
+                    transition: "color 0.1s",
                     padding: 0,
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "#ffffff")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "#888888")}
                 >
                   {link.label}
                 </button>
@@ -115,7 +122,8 @@ export default function Navbar() {
             </div>
 
             {/* CTA */}
-            <button
+            <motion.button
+              whileTap={{ scale: 0.97 }}
               onClick={() => scrollTo("platforms")}
               data-testid="navbar-cta"
               className="cta-btn"
@@ -130,11 +138,10 @@ export default function Navbar() {
                 fontWeight: 700,
                 letterSpacing: "0.01em",
                 cursor: "pointer",
-                whiteSpace: "nowrap",
               }}
             >
               Download
-            </button>
+            </motion.button>
           </div>
         </motion.nav>
       )}

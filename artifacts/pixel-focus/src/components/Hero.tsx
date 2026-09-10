@@ -33,9 +33,10 @@ function HeroH1() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            duration: 0.45,
+            type: "spring",
+            damping: 20,
+            stiffness: 150,
             delay: 0.1 + i * 0.05,
-            ease: [0.22, 1, 0.36, 1],
           }}
           style={{
             display: "inline-block",
@@ -118,7 +119,12 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.05 }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 150,
+            delay: 0.05,
+          }}
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -166,7 +172,12 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.38 }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 150,
+            delay: 0.38,
+          }}
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "clamp(14px, 1.8vw, 17px)",
@@ -185,7 +196,12 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.48 }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 150,
+            delay: 0.48,
+          }}
           style={{
             display: "flex",
             flexWrap: "wrap",
@@ -195,12 +211,12 @@ export default function Hero() {
           }}
         >
           {platforms.map(({ icon: Icon, label, href }) => (
-            <a
+            <motion.a
               key={label}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="platform-pill"
+              whileTap={{ scale: 0.97 }}
               data-testid={`hero-platform-${label.toLowerCase()}`}
               style={{
                 display: "flex",
@@ -231,7 +247,7 @@ export default function Hero() {
               >
                 {label}
               </span>
-            </a>
+            </motion.a>
           ))}
         </motion.div>
 
@@ -239,7 +255,13 @@ export default function Hero() {
         <motion.button
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.56 }}
+          whileTap={{ scale: 0.97 }}
+          transition={{
+            type: "spring",
+            damping: 20,
+            stiffness: 150,
+            delay: 0.56,
+          }}
           onClick={scrollToPlatforms}
           className="cta-btn"
           data-testid="hero-cta"

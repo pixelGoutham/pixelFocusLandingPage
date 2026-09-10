@@ -72,15 +72,18 @@ export default function Footer() {
                 border: "1px solid rgba(255,255,255,0.07)",
                 color: "#555555",
                 textDecoration: "none",
-                transition: "color 150ms ease, border-color 150ms ease",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#CDFF00";
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(205,255,0,0.3)";
+              onPointerDown={(e) => {
+                e.currentTarget.style.color = "#CDFF00";
+                e.currentTarget.style.borderColor = "rgba(205,255,0,0.3)";
               }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.color = "#555555";
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.07)";
+              onPointerUp={(e) => {
+                e.currentTarget.style.color = "#555555";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
+              }}
+              onPointerCancel={(e) => {
+                e.currentTarget.style.color = "#555555";
+                e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
               }}
             >
               <Icon size={14} />

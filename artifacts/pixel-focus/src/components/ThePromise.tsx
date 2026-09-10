@@ -46,7 +46,7 @@ export default function ThePromise() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ type: "spring", damping: 20, stiffness: 150 }}
         >
           {/* Italic serif line */}
           <p
@@ -113,12 +113,12 @@ export default function ThePromise() {
             }}
           >
             {platforms.map(({ icon: Icon, label, href }) => (
-              <a
+              <motion.a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cta-btn"
+                whileTap={{ scale: 0.97 }}
                 data-testid={`promise-download-${label.toLowerCase()}`}
                 style={{
                   display: "flex",
@@ -138,7 +138,7 @@ export default function ThePromise() {
               >
                 <Icon style={{ color: "#CDFF00", fontSize: "16px" }} />
                 {label}
-              </a>
+              </motion.a>
             ))}
           </div>
         </motion.div>

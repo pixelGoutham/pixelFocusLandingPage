@@ -64,7 +64,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
       initial={{ opacity: 0, x: isEven ? -40 : 40 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ type: "spring", damping: 20, stiffness: 150 }}
     >
       <span
         style={{
@@ -113,7 +113,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
       initial={{ opacity: 0, x: isEven ? 40 : -40 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ type: "spring", damping: 20, stiffness: 150 }}
       style={{ position: "relative" }}
     >
       <div
@@ -198,7 +198,7 @@ export default function Ecosystem() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ type: "spring", damping: 20, stiffness: 150 }}
           style={{
             maxWidth: "1100px",
             margin: "0 auto",

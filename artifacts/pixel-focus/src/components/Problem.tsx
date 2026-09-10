@@ -20,7 +20,7 @@ export default function Problem() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ type: "spring", damping: 20, stiffness: 150 }}
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "clamp(24px, 4.5vw, 52px)",
