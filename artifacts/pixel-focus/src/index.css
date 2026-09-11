@@ -67,61 +67,53 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* LIGHT MODE DEFAULT — PIXEL FOCUS */
+/* LIGHT MODE DEFAULT — MAGICAL GIRL STARLIGHT */
 :root {
-  /* Light mode - premium look */
+  /* Light mode - magical starlight */
   --button-outline: rgba(0, 0, 0, 0.1);
   --badge-outline: rgba(0, 0, 0, 0.05);
   --opaque-button-border-intensity: 9;
   --elevate-1: rgba(0, 0, 0, 0.04);
   --elevate-2: rgba(0, 0, 0, 0.09);
 
-  /* Light background */
-  --background: 0 0% 96%; /* #f8f8f8 */
-  --background-h: 0;
-  --background-s: 0%;
-  --background-l: 96%;
-  --foreground: 0 0% 7%; /* dark gray */
-  --foreground-h: 0;
-  --foreground-s: 0%;
-  --foreground-l: 7%;
-  --border: 0 0% 80%; /* light gray */
-  --card: 0 0% 100%; /* white */
-  --card-foreground: 0 0% 7%;
-  --card-border: 0 0% 80%;
-  --sidebar: 0 0% 95%;
-  --sidebar-foreground: 0 0% 7%;
-  --sidebar-border: 0 0% 80%;
-  --sidebar-primary: 72 100% 45%;
-  --sidebar-primary-foreground: 0 0% 5%;
-  --sidebar-accent: 0 0% 8%;
-  --sidebar-accent-foreground: 0 0% 100%;
-  --sidebar-ring: 72 100% 45%;
-  --popover: 0 0% 98%;
-  --popover-foreground: 0 0% 20%;
-  --popover-border: 0 0% 80%;
-  /* More vibrant accents */
-  --primary: 72 100% 45%;
-  --primary-h: 72;
-  --primary-s: 100%;
-  --primary-l: 45%;
-  --secondary: 180 100% 45%;
+  /* Light background - airy off-white with hint of lavender */
+  --background: 250 20% 98%; /* hsl(250, 20%, 98%) */
+  --background-h: 250;
+  --background-s: 20%;
+  --background-l: 98%;
+  --foreground: 250 30% 20%; /* dark violet for contrast */
+  --foreground-h: 250;
+  --foreground-s: 30%;
+  --foreground-l: 20%;
+  --border: 250 20% 85%; /* soft lavender border */
+  --card: 250 20% 99%; /* almost white with lavender tint */
+  --card-foreground: 250 30% 20%;
+  --card-border: 250 20% 85%;
+  --sidebar: 250 20% 97%;
+  --sidebar-foreground: 250 30% 20%;
+  --sidebar-border: 250 20% 85%;
+  /* Magical girl starlight accents - adjusted for light mode contrast */
+  --primary: 330 85% 35%; /* vibrant pink lowered for WCAG contrast */
+  --primary-h: 330;
+  --primary-s: 85%;
+  --primary-l: 35%;
+  --secondary: 180 85% 35%; /* electric teal lowered for WCAG contrast */
   --secondary-h: 180;
-  --secondary-s: 100%;
-  --secondary-l: 45%;
-  --muted: 0 0% 8%;
-  --accent: 72 100% 45%;
-  --accent-h: 72;
-  --accent-s: 100%;
-  --accent-l: 45%;
+  --secondary-s: 85%;
+  --secondary-l: 35%;
+  --muted: 250 20% 15%; /* soft lavender muted */
+  --accent: 45 95% 40%; /* star gold slightly toned down */
+  --accent-h: 45;
+  --accent-s: 95%;
+  --accent-l: 40%;
   --destructive: 0 70% 50%;
   --input: 0 0% 16%;
-  --ring: 72 100% 40%;
-  --chart-1: 72 100% 40%;
-  --chart-2: 180 60% 50%;
-  --chart-3: 280 60% 60%;
-  --chart-4: 30 90% 55%;
-  --chart-5: 340 70% 55%;
+  --ring: 330 85% 35%;
+  --chart-1: 330 85% 35%;
+  --chart-2: 180 85% 35%;
+  --chart-3: 45 95% 40%;
+  --chart-4: 250 20% 20%;
+  --chart-5: 250 20% 40%;
 
   --app-font-sans: 'Inter', sans-serif;
   --app-font-serif: 'Playfair Display', Georgia, serif;
