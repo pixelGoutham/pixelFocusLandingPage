@@ -1,7 +1,9 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import dashboardScreenshot from "../assets/screen-dashboard.png";
+import DraggableCard from "./DraggableCard";
 
 export default function AppReveal() {
+  const reducedMotion = useReducedMotion();
   return (
     <section
       id="app-reveal"
@@ -17,7 +19,7 @@ export default function AppReveal() {
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
-        transition={{ type: "spring", damping: 20, stiffness: 150 }}
+        transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
         style={{ textAlign: "center", marginBottom: "48px" }}
       >
         <span
@@ -54,7 +56,7 @@ export default function AppReveal() {
           initial={{ opacity: 0, scale: 0.92 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ type: "spring", damping: 20, stiffness: 150 }}
+          transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
           style={{
             position: "relative",
             zIndex: 1,
@@ -87,6 +89,16 @@ export default function AppReveal() {
             }}
           />
         </motion.div>
+
+        {/* Draggable card to demonstrate direct manipulation */}
+        <DraggableCard
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)"
+          }}
+        />
       </div>
     </section>
   );

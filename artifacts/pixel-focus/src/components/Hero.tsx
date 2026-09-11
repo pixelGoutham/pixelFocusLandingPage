@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { FaWindows } from "react-icons/fa";
 import { SiLinux, SiAndroid } from "react-icons/si";
 
@@ -33,9 +33,9 @@ function HeroH1() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 150,
+            type: reducedMotion ? "tween" : "spring",
+            bounce: 0,
+            duration: reducedMotion ? 0.2 : 0.4,
             delay: 0.1 + i * 0.05,
           }}
           style={{
@@ -63,9 +63,10 @@ const platforms = [
 ];
 
 export default function Hero() {
+  const reducedMotion = useReducedMotion();
   const scrollToPlatforms = () => {
     const el = document.getElementById("platforms");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
   };
 
   return (
@@ -120,9 +121,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 150,
+            type: reducedMotion ? "tween" : "spring",
+            bounce: 0,
+            duration: reducedMotion ? 0.15 : 0.3,
             delay: 0.05,
           }}
           style={{
@@ -173,9 +174,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 150,
+            type: reducedMotion ? "tween" : "spring",
+            bounce: 0,
+            duration: reducedMotion ? 0.2 : 0.4,
             delay: 0.38,
           }}
           style={{
@@ -197,9 +198,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 150,
+            type: reducedMotion ? "tween" : "spring",
+            bounce: 0,
+            duration: reducedMotion ? 0.2 : 0.4,
             delay: 0.48,
           }}
           style={{
@@ -257,9 +258,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           whileTap={{ scale: 0.97 }}
           transition={{
-            type: "spring",
-            damping: 20,
-            stiffness: 150,
+            type: reducedMotion ? "tween" : "spring",
+            bounce: 0,
+            duration: reducedMotion ? 0.2 : 0.4,
             delay: 0.56,
           }}
           onClick={scrollToPlatforms}
@@ -286,7 +287,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
+        transition={{ delay: reducedMotion ? 0 : 2, duration: reducedMotion ? 0.3 : 1 }}
         style={{
           position: "absolute",
           bottom: "36px",
@@ -300,7 +301,7 @@ export default function Hero() {
       >
         <motion.div
           animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: reducedMotion ? 0.3 : 2, repeat: Infinity, ease: "easeInOut" }}
           style={{
             width: "1px",
             height: "40px",

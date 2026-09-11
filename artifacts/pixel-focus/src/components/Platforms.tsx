@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { FaWindows } from "react-icons/fa";
 import { SiLinux, SiAndroid } from "react-icons/si";
 
@@ -24,6 +24,7 @@ const platforms = [
 ];
 
 export default function Platforms() {
+  const reducedMotion = useReducedMotion();
   return (
     <section
       id="platforms"
@@ -39,7 +40,7 @@ export default function Platforms() {
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ type: "spring", damping: 20, stiffness: 150 }}
+        transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
         style={{ textAlign: "center", marginBottom: "64px" }}
       >
         <span
@@ -87,7 +88,7 @@ export default function Platforms() {
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ y: -4, borderColor: "hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.2)" }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ type: "spring", damping: 20, stiffness: 150 }}
+            transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
             data-testid={`platform-card-${name.toLowerCase()}`}
             style={{
               background: "var(--color-card)",
@@ -172,7 +173,7 @@ export default function Platforms() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-60px" }}
-        transition={{ type: "spring", damping: 20, stiffness: 150, delay: 0.4 }}
+        transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4, delay: 0.4 }}
         style={{
           textAlign: "center",
           marginTop: "40px",

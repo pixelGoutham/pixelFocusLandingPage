@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { FaWindows } from "react-icons/fa";
 import { SiLinux, SiAndroid } from "react-icons/si";
 
@@ -9,6 +9,7 @@ const platforms = [
 ];
 
 export default function ThePromise() {
+  const reducedMotion = useReducedMotion();
   return (
     <section
       id="promise"
@@ -46,7 +47,7 @@ export default function ThePromise() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ type: "spring", damping: 20, stiffness: 150 }}
+          transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
         >
           {/* Italic serif line */}
           <p

@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const lastScrollY = useRef(0);
+  const reducedMotion = useReducedMotion();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +25,7 @@ export default function Navbar() {
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
   };
 
   return (
@@ -35,7 +36,7 @@ export default function Navbar() {
           initial={{ y: -80, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -80, opacity: 0 }}
-          transition={{ type: "spring", damping: 10, stiffness: 100 }} // Approximately damping 1, response 0.35
+          transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.15 : 0.35 }}
           style={{
             position: "fixed",
             top: "16px",
