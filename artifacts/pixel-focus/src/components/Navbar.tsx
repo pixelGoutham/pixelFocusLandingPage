@@ -28,6 +28,11 @@ export default function Navbar() {
   };
 
   const toggleTheme = () => {
+    // Determine direction based on current theme
+    const isDark = document.documentElement.classList.contains('dark');
+    document.body.classList.remove('transition-left-to-right', 'transition-right-to-left');
+    document.body.classList.add(isDark ? 'transition-left-to-right' : 'transition-right-to-left');
+
     // Add transitioning class to trigger glass blur overlay
     document.body.classList.add('theme-transitioning');
 
@@ -77,17 +82,20 @@ export default function Navbar() {
             <div
               style={{
                 fontFamily: "'Inter', sans-serif",
-                fontWeight: 800,
-                fontSize: "15px",
-                letterSpacing: "-0.02em",
+                fontWeight: 700,
+                fontSize: "14px",
+                letterSpacing: "-0.01em",
                 color: "var(--color-foreground)",
                 cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: "4px"
               }}
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               data-testid="navbar-logo"
             >
-              Pixel{" "}
-              <span style={{ color: "var(--color-primary)" }}>Focus</span>
+              <div style={{ width: "20px", height: "20px", borderRadius: "50%", background: "var(--color-primary)" }} />
+              <span style={{ fontWeight: 600 }}>PixelFocus</span>
             </div>
 
             {/* Theme toggle button */}
