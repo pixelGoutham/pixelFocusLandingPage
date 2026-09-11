@@ -21,7 +21,7 @@ function HeroH1() {
         letterSpacing: "-0.035em",
         fontWeight: 900,
         fontFamily: "'Inter', sans-serif",
-        color: "#ffffff",
+        color: "var(--color-foreground)",
         margin: "0 0 24px",
         maxWidth: "860px",
         textAlign: "center",
@@ -46,7 +46,7 @@ function HeroH1() {
               : "'Inter', sans-serif",
             fontStyle: word.italic ? "italic" : "normal",
             fontWeight: word.italic ? 700 : 900,
-            color: word.italic ? "#CDFF00" : "#ffffff",
+            color: word.italic ? "var(--color-primary)" : "var(--color-foreground)",
           }}
         >
           {word.text}
@@ -80,7 +80,7 @@ export default function Hero() {
         position: "relative",
         overflow: "hidden",
         padding: "clamp(120px, 18vh, 200px) 24px 80px",
-        background: "#080808",
+        background: "var(--color-background)",
       }}
       data-testid="hero-section"
     >
@@ -95,7 +95,7 @@ export default function Hero() {
           width: "min(700px, 90vw)",
           height: "min(500px, 70vw)",
           background:
-            "radial-gradient(ellipse at center, rgba(205,255,0,0.28) 0%, rgba(205,255,0,0.06) 45%, transparent 70%)",
+            "radial-gradient(ellipse at center, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.28) 0%, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.06) 45%, transparent 70%)",
           borderRadius: "50%",
           pointerEvents: "none",
           zIndex: 0,
@@ -137,7 +137,7 @@ export default function Hero() {
               width: "6px",
               height: "6px",
               borderRadius: "50%",
-              background: "#CDFF00",
+              background: "var(--color-primary)",
               display: "inline-block",
             }}
           />
@@ -148,7 +148,7 @@ export default function Hero() {
               fontWeight: 600,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#CDFF00",
+              color: "var(--color-primary)",
             }}
             data-testid="hero-label"
           >
@@ -159,7 +159,7 @@ export default function Hero() {
               width: "6px",
               height: "6px",
               borderRadius: "50%",
-              background: "#CDFF00",
+              background: "var(--color-primary)",
               display: "inline-block",
             }}
           />
@@ -183,7 +183,7 @@ export default function Hero() {
             fontSize: "clamp(14px, 1.8vw, 17px)",
             fontWeight: 400,
             lineHeight: 1.65,
-            color: "#888888",
+            color: "var(--color-muted-foreground)",
             maxWidth: "460px",
             margin: "0 0 28px",
           }}
@@ -223,16 +223,16 @@ export default function Hero() {
                 alignItems: "center",
                 gap: "8px",
                 padding: "9px 18px",
-                border: "1px solid rgba(255,255,255,0.1)",
+                border: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.1)",
                 borderRadius: "999px",
                 cursor: "pointer",
-                background: "rgba(255,255,255,0.03)",
+                background: "hsla(var(--background-h), var(--background-s), var(--background-l), 0.03)",
                 textDecoration: "none",
               }}
             >
               <Icon
                 style={{
-                  color: "#CDFF00",
+                  color: "var(--color-primary)",
                   fontSize: "15px",
                   flexShrink: 0,
                 }}
@@ -242,7 +242,7 @@ export default function Hero() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "13px",
                   fontWeight: 500,
-                  color: "#cccccc",
+                  color: "var(--color-muted-foreground)",
                 }}
               >
                 {label}
@@ -266,8 +266,8 @@ export default function Hero() {
           className="cta-btn"
           data-testid="hero-cta"
           style={{
-            background: "#CDFF00",
-            color: "#080808",
+            background: "var(--color-primary)",
+            color: "var(--color-primary-foreground)",
             border: "none",
             borderRadius: "999px",
             padding: "14px 38px",
@@ -304,7 +304,7 @@ export default function Hero() {
           style={{
             width: "1px",
             height: "40px",
-            background: "linear-gradient(to bottom, #CDFF00, transparent)",
+            background: "linear-gradient(to bottom, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 1), transparent)",
             opacity: 0.5,
           }}
         />

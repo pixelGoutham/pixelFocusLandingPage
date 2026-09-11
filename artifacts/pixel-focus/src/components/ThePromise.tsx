@@ -13,13 +13,13 @@ export default function ThePromise() {
     <section
       id="promise"
       style={{
-        background: "#080808",
+        background: "var(--color-background)",
         padding: "clamp(100px, 16vw, 200px) 24px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         textAlign: "center",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
+        borderTop: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.05)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -35,7 +35,7 @@ export default function ThePromise() {
           width: "600px",
           height: "600px",
           background:
-            "radial-gradient(ellipse at center, rgba(205,255,0,0.06) 0%, transparent 65%)",
+            "radial-gradient(ellipse at center, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.06) 0%, transparent 65%)",
           borderRadius: "50%",
           pointerEvents: "none",
         }}
@@ -55,7 +55,7 @@ export default function ThePromise() {
               fontStyle: "italic",
               fontSize: "clamp(28px, 5vw, 60px)",
               fontWeight: 700,
-              color: "#666666",
+              color: "var(--color-muted-foreground)",
               margin: "0 0 4px",
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
@@ -70,7 +70,7 @@ export default function ThePromise() {
               fontFamily: "'Inter', sans-serif",
               fontSize: "clamp(32px, 6vw, 72px)",
               fontWeight: 900,
-              color: "#ffffff",
+              color: "var(--color-foreground)",
               margin: "0 0 48px",
               lineHeight: 1.0,
               letterSpacing: "-0.04em",
@@ -85,7 +85,7 @@ export default function ThePromise() {
             style={{
               width: "200px",
               height: "1px",
-              background: "#CDFF00",
+              background: "var(--color-primary)",
               margin: "0 auto 40px",
             }}
           />
@@ -95,7 +95,7 @@ export default function ThePromise() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: "14px",
-              color: "#555555",
+              color: "var(--color-muted-foreground)",
               margin: "0 0 32px",
               letterSpacing: "0.01em",
             }}
@@ -125,18 +125,18 @@ export default function ThePromise() {
                   alignItems: "center",
                   gap: "8px",
                   padding: "12px 22px",
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  background: "hsla(var(--border-h), var(--border-s), var(--border-l), 0.05)",
+                  border: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.1)",
                   borderRadius: "999px",
                   cursor: "pointer",
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "13px",
                   fontWeight: 600,
-                  color: "#cccccc",
+                  color: "var(--color-muted-foreground)",
                   textDecoration: "none",
                 }}
               >
-                <Icon style={{ color: "#CDFF00", fontSize: "16px" }} />
+                <Icon style={{ color: "var(--color-primary)", fontSize: "16px" }} />
                 {label}
               </motion.a>
             ))}

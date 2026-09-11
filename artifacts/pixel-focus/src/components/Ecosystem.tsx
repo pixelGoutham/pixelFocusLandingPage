@@ -73,7 +73,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
           fontWeight: 700,
           letterSpacing: "0.14em",
           textTransform: "uppercase",
-          color: "#CDFF00",
+          color: "var(--color-primary)",
           display: "block",
           marginBottom: "16px",
         }}
@@ -87,7 +87,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
           fontWeight: 800,
           lineHeight: 1.15,
           letterSpacing: "-0.025em",
-          color: "#ffffff",
+          color: "var(--color-foreground)",
           margin: "0 0 16px",
         }}
       >
@@ -98,7 +98,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
           fontFamily: "'Inter', sans-serif",
           fontSize: "clamp(14px, 1.5vw, 17px)",
           lineHeight: 1.7,
-          color: "#666666",
+          color: "var(--color-muted-foreground)",
           margin: 0,
           maxWidth: "380px",
         }}
@@ -121,7 +121,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
           position: "absolute",
           inset: "-20px",
           background:
-            "radial-gradient(ellipse at center, rgba(205,255,0,0.07) 0%, transparent 70%)",
+            "radial-gradient(ellipse at center, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.07) 0%, transparent 70%)",
           borderRadius: "16px",
           pointerEvents: "none",
         }}
@@ -133,7 +133,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
           width: "100%",
           display: "block",
           borderRadius: "10px",
-          border: "1px solid rgba(255,255,255,0.07)",
+          border: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.07)",
           boxShadow: "0 24px 80px rgba(0,0,0,0.7)",
           position: "relative",
           zIndex: 1,
@@ -145,7 +145,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
   return (
     <div
       style={{
-        borderBottom: "1px solid rgba(255,255,255,0.05)",
+        borderBottom: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.05)",
         padding: "clamp(48px, 8vw, 96px) clamp(24px, 6vw, 80px)",
       }}
       data-testid={`feature-row-${feature.num}`}
@@ -182,7 +182,7 @@ export default function Ecosystem() {
     <section
       id="features"
       style={{
-        background: "#080808",
+        background: "var(--color-background)",
         paddingTop: "clamp(60px, 10vw, 120px)",
       }}
       data-testid="ecosystem-section"
@@ -215,7 +215,7 @@ export default function Ecosystem() {
               fontWeight: 700,
               letterSpacing: "0.14em",
               textTransform: "uppercase",
-              color: "#444444",
+              color: "var(--color-muted-foreground)",
               margin: 0,
             }}
           >
@@ -227,7 +227,7 @@ export default function Ecosystem() {
               fontStyle: "italic",
               fontSize: "clamp(22px, 4vw, 42px)",
               fontWeight: 700,
-              color: "#ffffff",
+              color: "var(--color-foreground)",
               letterSpacing: "-0.02em",
             }}
           >

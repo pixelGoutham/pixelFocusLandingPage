@@ -21,8 +21,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#080808",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
+        background: "var(--color-background)",
+        borderTop: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.05)",
         padding: "28px clamp(24px, 5vw, 60px)",
       }}
       data-testid="footer"
@@ -45,11 +45,12 @@ export default function Footer() {
             fontWeight: 800,
             fontSize: "14px",
             letterSpacing: "-0.02em",
-            color: "#ffffff",
+            color: "var(--color-foreground)",
           }}
           data-testid="footer-wordmark"
         >
-          Pixel <span style={{ color: "#CDFF00" }}>Focus</span>
+          Pixel{" "}
+          <span style={{ color: "var(--color-primary)" }}>Focus</span>
         </div>
 
         {/* Social links */}
@@ -69,21 +70,21 @@ export default function Footer() {
                 width: "34px",
                 height: "34px",
                 borderRadius: "8px",
-                border: "1px solid rgba(255,255,255,0.07)",
-                color: "#555555",
+                border: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.07)",
+                color: "var(--color-muted-foreground)",
                 textDecoration: "none",
               }}
               onPointerDown={(e) => {
-                e.currentTarget.style.color = "#CDFF00";
-                e.currentTarget.style.borderColor = "rgba(205,255,0,0.3)";
+                e.currentTarget.style.color = "var(--color-primary)";
+                e.currentTarget.style.borderColor = "hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.3)";
               }}
               onPointerUp={(e) => {
-                e.currentTarget.style.color = "#555555";
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
+                e.currentTarget.style.color = "var(--color-muted-foreground)";
+                e.currentTarget.style.borderColor = "hsla(var(--border-h), var(--border-s), var(--border-l), 0.07)";
               }}
               onPointerCancel={(e) => {
-                e.currentTarget.style.color = "#555555";
-                e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)";
+                e.currentTarget.style.color = "var(--color-muted-foreground)";
+                e.currentTarget.style.borderColor = "hsla(var(--border-h), var(--border-s), var(--border-l), 0.07)";
               }}
             >
               <Icon size={14} />
@@ -99,7 +100,7 @@ export default function Footer() {
             fontWeight: 500,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
-            color: "#555555",
+            color: "var(--color-muted-foreground)",
           }}
           data-testid="footer-tagline"
         >
@@ -116,14 +117,14 @@ export default function Footer() {
           flexWrap: "wrap",
           gap: "8px",
           paddingTop: "16px",
-          borderTop: "1px solid rgba(255,255,255,0.03)",
+          borderTop: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.03)",
         }}
       >
         <span
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "11px",
-            color: "#666666",
+            color: "var(--color-muted-foreground)",
           }}
           data-testid="footer-copyright"
         >
@@ -133,7 +134,7 @@ export default function Footer() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "10px",
-            color: "#555555",
+            color: "var(--color-muted-foreground)",
             letterSpacing: "0.08em",
           }}
         >

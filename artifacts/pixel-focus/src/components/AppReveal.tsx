@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import dashboardScreenshot from "../assets/screen-dashboard.png";
+import { dashboardScreenshot } from "../assets/screen-dashboard.png";
 
 export default function AppReveal() {
   return (
     <section
       id="app-reveal"
       style={{
-        background: "#080808",
+        background: "var(--color-background)",
         padding: "clamp(40px, 8vw, 100px) 24px clamp(80px, 12vw, 140px)",
         overflow: "hidden",
       }}
@@ -27,7 +27,7 @@ export default function AppReveal() {
             fontWeight: 600,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#CDFF00",
+            color: "var(--color-primary)",
           }}
         >
           The command center
@@ -42,7 +42,7 @@ export default function AppReveal() {
             position: "absolute",
             inset: "-40px",
             background:
-              "radial-gradient(ellipse at center, rgba(205,255,0,0.1) 0%, transparent 65%)",
+              "radial-gradient(ellipse at center, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.1) 0%, transparent 65%)",
             borderRadius: "24px",
             pointerEvents: "none",
             zIndex: 0,
@@ -61,9 +61,9 @@ export default function AppReveal() {
             transform: "perspective(1200px) rotateX(4deg)",
             borderRadius: "16px",
             overflow: "hidden",
-            border: "1px solid rgba(255,255,255,0.08)",
+            border: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.08)",
             boxShadow:
-              "0 40px 120px rgba(0,0,0,0.8), 0 0 0 1px rgba(205,255,0,0.06)",
+              "0 40px 120px rgba(0,0,0,0.8), 0 0 0 1px hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.06)",
           }}
           data-testid="app-screenshot"
         >

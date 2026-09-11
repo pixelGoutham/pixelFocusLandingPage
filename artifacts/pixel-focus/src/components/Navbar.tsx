@@ -49,10 +49,10 @@ export default function Navbar() {
         >
           <div
             style={{
-              background: "rgba(12, 12, 12, 0.82)",
+              background: "hsla(var(--background-h), var(--background-s), var(--background-l), 0.82)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
-              border: "1px solid rgba(255,255,255,0.07)",
+              border: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.07)",
               borderRadius: "999px",
               padding: "12px 20px",
               display: "flex",
@@ -67,14 +67,14 @@ export default function Navbar() {
                 fontWeight: 800,
                 fontSize: "15px",
                 letterSpacing: "-0.02em",
-                color: "#ffffff",
+                color: "var(--color-foreground)",
                 cursor: "pointer",
               }}
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               data-testid="navbar-logo"
             >
               Pixel{" "}
-              <span style={{ color: "#CDFF00" }}>Focus</span>
+              <span style={{ color: "var(--color-primary)" }}>Focus</span>
             </div>
 
             {/* Nav links — desktop only */}
@@ -93,20 +93,20 @@ export default function Navbar() {
                 <button
                   key={link.id}
                   onPointerDown={(e) => {
-                    e.currentTarget.style.color = "#ffffff";
+                    e.currentTarget.style.color = "var(--color-foreground)";
                   }}
                   onPointerUp={(e) => {
-                    e.currentTarget.style.color = "#888888";
+                    e.currentTarget.style.color = "var(--color-muted-foreground)";
                   }}
                   onPointerCancel={(e) => {
-                    e.currentTarget.style.color = "#888888";
+                    e.currentTarget.style.color = "var(--color-muted-foreground)";
                   }}
                   onClick={() => scrollTo(link.id)}
                   data-testid={`nav-link-${link.id}`}
                   style={{
                     background: "none",
                     border: "none",
-                    color: "#888888",
+                    color: "var(--color-muted-foreground)",
                     fontFamily: "'Inter', sans-serif",
                     fontSize: "13px",
                     fontWeight: 500,
@@ -128,8 +128,8 @@ export default function Navbar() {
               data-testid="navbar-cta"
               className="cta-btn"
               style={{
-                background: "#CDFF00",
-                color: "#0a0a0a",
+                background: "var(--color-primary)",
+                color: "var(--color-primary-foreground)",
                 border: "none",
                 borderRadius: "999px",
                 padding: "9px 20px",

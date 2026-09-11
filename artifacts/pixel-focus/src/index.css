@@ -30,15 +30,15 @@
 
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-muted-border: var(--muted-border);
+  --color-muted-border: hsl(var(--muted-border));
 
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-accent-border: var(--accent-border);
+  --color-accent-border: hsl(var(--accent-border));
 
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-  --color-destructive-border: var(--destructive-border);
+  --color-destructive-border: hsl(var(--destructive-border));
 
   --color-chart-1: hsl(var(--chart-1));
   --color-chart-2: hsl(var(--chart-2));
@@ -54,7 +54,7 @@
   --color-sidebar-primary-border: var(--sidebar-primary-border);
   --color-sidebar-accent: hsl(var(--sidebar-accent));
   --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
-  --color-sidebar-accent-border: var(--sidebar-accent-border);
+  --color-sidebar-accent-border: hsl(var(--sidebar-accent-border));
   --color-sidebar-ring: hsl(var(--sidebar-ring));
 
   --font-sans: var(--app-font-sans);
@@ -67,43 +67,54 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* DARK THEME — PIXEL FOCUS */
+/* LIGHT MODE DEFAULT — PIXEL FOCUS */
 :root {
-  --button-outline: rgba(255, 255, 255, 0.1);
-  --badge-outline: rgba(255, 255, 255, 0.05);
+  /* Light mode - premium look */
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --badge-outline: rgba(0, 0, 0, 0.05);
   --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255, 255, 255, 0.04);
-  --elevate-2: rgba(255, 255, 255, 0.09);
+  --elevate-1: rgba(0, 0, 0, 0.04);
+  --elevate-2: rgba(0, 0, 0, 0.09);
 
-  /* #080808 near-black */
-  --background: 0 0% 3.1%;
-  --foreground: 0 0% 100%;
-  --border: 0 0% 12%;
-  --card: 0 0% 6.7%;
-  --card-foreground: 0 0% 100%;
-  --card-border: 0 0% 14%;
-  --sidebar: 0 0% 4.3%;
-  --sidebar-foreground: 0 0% 100%;
-  --sidebar-border: 0 0% 12%;
+  /* Light background */
+  --background: 0 0% 98%; /* #fafafa */
+  --background-h: 0;
+  --background-s: 0%;
+  --background-l: 98%;
+  --foreground: 0 0% 20%; /* dark gray */
+  --foreground-h: 0;
+  --foreground-s: 0%;
+  --foreground-l: 20%;
+  --border: 0 0% 80%; /* light gray */
+  --card: 0 0% 100%; /* white */
+  --card-foreground: 0 0% 20%;
+  --card-border: 0 0% 80%;
+  --sidebar: 0 0% 95%;
+  --sidebar-foreground: 0 0% 20%;
+  --sidebar-border: 0 0% 80%;
   --sidebar-primary: 72 100% 40%;
   --sidebar-primary-foreground: 0 0% 5%;
   --sidebar-accent: 0 0% 8%;
   --sidebar-accent-foreground: 0 0% 100%;
   --sidebar-ring: 72 100% 40%;
-  --popover: 0 0% 6%;
-  --popover-foreground: 0 0% 100%;
-  --popover-border: 0 0% 14%;
+  --popover: 0 0% 98%;
+  --popover-foreground: 0 0% 20%;
+  --popover-border: 0 0% 80%;
   /* #CDFF00 electric yellow-green: hsl(72, 100%, 50%) approx */
   --primary: 72 100% 40%;
-  --primary-foreground: 0 0% 5%;
+  --primary-h: 72;
+  --primary-s: 100%;
+  --primary-l: 40%;
   --secondary: 0 0% 8%;
-  --secondary-foreground: 0 0% 100%;
+  --secondary-h: 180;
+  --secondary-s: 100%;
+  --secondary-l: 50%;
   --muted: 0 0% 8%;
-  --muted-foreground: 0 0% 53%;
   --accent: 72 100% 40%;
-  --accent-foreground: 0 0% 5%;
+  --accent-h: 72;
+  --accent-s: 100%;
+  --accent-l: 40%;
   --destructive: 0 70% 50%;
-  --destructive-foreground: 0 0% 100%;
   --input: 0 0% 16%;
   --ring: 72 100% 40%;
   --chart-1: 72 100% 40%;
@@ -137,6 +148,7 @@
   --destructive-border: hsl(var(--destructive));
 }
 
+/* DARK THEME — PIXEL FOCUS */
 .dark {
   --button-outline: rgba(255, 255, 255, 0.1);
   --badge-outline: rgba(255, 255, 255, 0.05);
@@ -144,8 +156,15 @@
   --elevate-1: rgba(255, 255, 255, 0.04);
   --elevate-2: rgba(255, 255, 255, 0.09);
 
+  /* #080808 near-black */
   --background: 0 0% 3.1%;
+  --background-h: 0;
+  --background-s: 0%;
+  --background-l: 3.1%;
   --foreground: 0 0% 100%;
+  --foreground-h: 0;
+  --foreground-s: 0%;
+  --foreground-l: 100%;
   --border: 0 0% 12%;
   --card: 0 0% 6.7%;
   --card-foreground: 0 0% 100%;
@@ -162,15 +181,19 @@
   --popover-foreground: 0 0% 100%;
   --popover-border: 0 0% 14%;
   --primary: 72 100% 40%;
-  --primary-foreground: 0 0% 5%;
+  --primary-h: 72;
+  --primary-s: 100%;
+  --primary-l: 40%;
   --secondary: 0 0% 8%;
-  --secondary-foreground: 0 0% 100%;
+  --secondary-h: 180;
+  --secondary-s: 100%;
+  --secondary-l: 50%;
   --muted: 0 0% 8%;
-  --muted-foreground: 0 0% 53%;
   --accent: 72 100% 40%;
-  --accent-foreground: 0 0% 5%;
+  --accent-h: 72;
+  --accent-s: 100%;
+  --accent-l: 40%;
   --destructive: 0 70% 50%;
-  --destructive-foreground: 0 0% 100%;
   --input: 0 0% 16%;
   --ring: 72 100% 40%;
   --chart-1: 72 100% 40%;
@@ -200,8 +223,8 @@
 
   body {
     @apply antialiased;
-    background-color: #080808;
-    color: #ffffff;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-family: 'Inter', sans-serif;
   }
 }
@@ -217,15 +240,15 @@
   }
 
   .text-accent-yellow {
-    color: #CDFF00;
+    color: hsl(var(--primary));
   }
 
   .bg-accent-yellow {
-    background-color: #CDFF00;
+    background-color: hsl(var(--primary));
   }
 
   .border-accent-yellow {
-    border-color: #CDFF00;
+    border-color: hsl(var(--primary));
   }
 
   input[type='search']::-webkit-search-cancel-button {

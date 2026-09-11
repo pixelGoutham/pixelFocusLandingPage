@@ -28,9 +28,9 @@ export default function Platforms() {
     <section
       id="platforms"
       style={{
-        background: "#080808",
+        background: "var(--color-background)",
         padding: "clamp(80px, 12vw, 140px) 24px",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
+        borderTop: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.05)",
       }}
       data-testid="platforms-section"
     >
@@ -49,7 +49,7 @@ export default function Platforms() {
             fontWeight: 700,
             letterSpacing: "0.14em",
             textTransform: "uppercase",
-            color: "#CDFF00",
+            color: "var(--color-primary)",
             display: "block",
             marginBottom: "16px",
           }}
@@ -62,7 +62,7 @@ export default function Platforms() {
             fontSize: "clamp(28px, 5vw, 52px)",
             fontWeight: 900,
             letterSpacing: "-0.03em",
-            color: "#ffffff",
+            color: "var(--color-foreground)",
             margin: 0,
           }}
         >
@@ -85,13 +85,13 @@ export default function Platforms() {
             key={name}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ y: -4, borderColor: "rgba(205,255,0,0.2)" }}
+            whileHover={{ y: -4, borderColor: "hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.2)" }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ type: "spring", damping: 20, stiffness: 150 }}
             data-testid={`platform-card-${name.toLowerCase()}`}
             style={{
-              background: "#0F0F0F",
-              border: "1px solid rgba(255,255,255,0.07)",
+              background: "var(--color-card)",
+              border: "1px solid hsla(var(--border-h), var(--border-s), var(--border-l), 0.07)",
               borderRadius: "20px",
               padding: "40px 32px",
               display: "flex",
@@ -104,14 +104,14 @@ export default function Platforms() {
               style={{
                 width: "52px",
                 height: "52px",
-                background: "rgba(205,255,0,0.08)",
+                background: "hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.08)",
                 borderRadius: "14px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
               }}
             >
-              <Icon style={{ color: "#CDFF00", fontSize: "26px" }} />
+              <Icon style={{ color: "var(--color-primary)", fontSize: "26px" }} />
             </div>
 
             <div>
@@ -120,7 +120,7 @@ export default function Platforms() {
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "19px",
                   fontWeight: 700,
-                  color: "#ffffff",
+                  color: "var(--color-foreground)",
                   letterSpacing: "-0.02em",
                   marginBottom: "6px",
                 }}
@@ -131,7 +131,7 @@ export default function Platforms() {
                 style={{
                   fontFamily: "'Inter', sans-serif",
                   fontSize: "13px",
-                  color: "#555555",
+                  color: "var(--color-muted-foreground)",
                   lineHeight: 1.5,
                 }}
               >
@@ -147,8 +147,8 @@ export default function Platforms() {
               data-testid={`download-btn-${name.toLowerCase()}`}
               style={{
                 display: "inline-block",
-                background: "#CDFF00",
-                color: "#080808",
+                background: "var(--color-primary)",
+                color: "var(--color-primary-foreground)",
                 border: "none",
                 borderRadius: "999px",
                 padding: "12px 24px",
@@ -178,7 +178,7 @@ export default function Platforms() {
           marginTop: "40px",
           fontFamily: "'Inter', sans-serif",
           fontSize: "13px",
-          color: "#444444",
+          color: "var(--color-muted-foreground)",
           letterSpacing: "0.01em",
         }}
         data-testid="coming-soon-text"

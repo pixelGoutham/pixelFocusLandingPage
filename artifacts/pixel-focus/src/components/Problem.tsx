@@ -5,7 +5,7 @@ export default function Problem() {
     <section
       id="problem"
       style={{
-        background: "#080808",
+        background: "var(--color-background)",
         padding: "clamp(80px, 12vw, 160px) 24px",
         display: "flex",
         flexDirection: "column",
@@ -27,29 +27,28 @@ export default function Problem() {
             fontWeight: 800,
             lineHeight: 1.2,
             letterSpacing: "-0.03em",
-            color: "#ffffff",
+            color: "var(--color-foreground)",
             margin: "0 0 20px",
           }}
           data-testid="problem-statement"
         >
           You have ten tabs open.
           <br />
-          <span style={{ color: "#999999" }}>Three planners.</span>
+          <span style={{ color: "var(--color-muted-foreground)" }}>Three planners.</span>
           <br />
-          <span style={{ color: "#777777" }}>One deadline.</span>
+          <span style={{ color: "var(--color-muted-foreground)" }}>One deadline.</span>
           <br />
           <span
             style={{
               fontFamily: "'Playfair Display', serif",
               fontStyle: "italic",
-              color: "#555555",
+              color: "var(--color-muted-foreground)",
               fontWeight: 700,
             }}
           >
             Zero clarity.
           </span>
         </motion.p>
-
       </div>
     </section>
   );
