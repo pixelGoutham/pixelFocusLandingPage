@@ -27,6 +27,19 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const toggleTheme = () => {
+    // Add transitioning class to trigger glass blur overlay
+    document.body.classList.add('theme-transitioning');
+
+    // Toggle dark class on html element
+    document.documentElement.classList.toggle('dark');
+
+    // Remove transitioning class after transition duration
+    setTimeout(() => {
+      document.body.classList.remove('theme-transitioning');
+    }, 500);
+  };
+
   return (
     <AnimatePresence>
       {visible && (
@@ -76,6 +89,32 @@ export default function Navbar() {
               Pixel{" "}
               <span style={{ color: "var(--color-primary)" }}>Focus</span>
             </div>
+
+            {/* Theme toggle button */}
+            <button
+              onClick={toggleTheme}
+              style={{
+                background: "none",
+                border: "none",
+                color: "var(--color-muted-foreground)",
+                fontSize: "20px",
+                cursor: "pointer",
+                padding: "4px 8px",
+                borderRadius: "8px",
+                transition: "all 0.2s ease",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.color = "var(--color-foreground)";
+                e.currentTarget.style.transform = "scale(1.1)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.color = "var(--color-muted-foreground)";
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+              aria-label="Toggle theme"
+            >
+              🌓
+            </button>
 
             {/* Nav links — desktop only */}
             <div
