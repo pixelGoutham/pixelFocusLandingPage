@@ -67,51 +67,51 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* LIGHT MODE DEFAULT — MAGICAL GIRL STARLIGHT */
+/* MAGICAL GIRL STARLIGHT - DARK MODE ONLY */
 :root {
-  /* Light mode - magical starlight */
-  --button-outline: rgba(0, 0, 0, 0.1);
-  --badge-outline: rgba(0, 0, 0, 0.05);
+  /* Dark mode - magical starlight (always on) */
+  --button-outline: rgba(255, 255, 255, 0.1);
+  --badge-outline: rgba(255, 255, 255, 0.05);
   --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(0, 0, 0, 0.04);
-  --elevate-2: rgba(0, 0, 0, 0.09);
+  --elevate-1: rgba(255, 255, 255, 0.04);
+  --elevate-2: rgba(255, 255, 255, 0.09);
 
-  /* Light background - airy off-white with hint of lavender */
-  --background: 250 20% 98%; /* hsl(250, 20%, 98%) */
+  /* Deep midnight violet */
+  --background: 250 40% 8%; /* hsl(250, 40%, 8%) */
   --background-h: 250;
-  --background-s: 20%;
-  --background-l: 98%;
-  --foreground: 250 30% 20%; /* dark violet for contrast */
-  --foreground-h: 250;
-  --foreground-s: 30%;
-  --foreground-l: 20%;
-  --border: 250 20% 85%; /* soft lavender border */
-  --card: 250 20% 99%; /* almost white with lavender tint */
-  --card-foreground: 250 30% 20%;
-  --card-border: 250 20% 85%;
-  --sidebar: 250 20% 97%;
-  --sidebar-foreground: 250 30% 20%;
-  --sidebar-border: 250 20% 85%;
-  /* Magical girl starlight accents - adjusted for light mode contrast */
-  --primary: 330 85% 35%; /* vibrant pink lowered for WCAG contrast */
+  --background-s: 40%;
+  --background-l: 8%;
+  --foreground: 0 0% 95%; /* near white for contrast */
+  --foreground-h: 0;
+  --foreground-s: 0%;
+  --foreground-l: 95%;
+  --border: 250 20% 15%; /* soft lavender border */
+  --card: 250 20% 12%; /* slightly elevated background */
+  --card-foreground: 0 0% 95%;
+  --card-border: 250 20% 15%;
+  --sidebar: 250 20% 10%; /* even darker sidebar */
+  --sidebar-foreground: 0 0% 95%;
+  --sidebar-border: 250 20% 15%;
+  /* Magical girl starlight accents - vibrant and glowing */
+  --primary: 330 85% 65%; /* vibrant pink */
   --primary-h: 330;
   --primary-s: 85%;
-  --primary-l: 35%;
-  --secondary: 180 85% 35%; /* electric teal lowered for WCAG contrast */
+  --primary-l: 65%;
+  --secondary: 180 85% 60%; /* electric teal */
   --secondary-h: 180;
   --secondary-s: 85%;
-  --secondary-l: 35%;
-  --muted: 250 20% 15%; /* soft lavender muted */
-  --accent: 45 95% 40%; /* star gold slightly toned down */
+  --secondary-l: 60%;
+  --muted: 250 20% 20%; /* soft lavender muted */
+  --accent: 45 95% 60%; /* star gold */
   --accent-h: 45;
   --accent-s: 95%;
-  --accent-l: 40%;
+  --accent-l: 60%;
   --destructive: 0 70% 50%;
   --input: 0 0% 16%;
-  --ring: 330 85% 35%;
-  --chart-1: 330 85% 35%;
-  --chart-2: 180 85% 35%;
-  --chart-3: 45 95% 40%;
+  --ring: 330 85% 65%;
+  --chart-1: 330 85% 65%;
+  --chart-2: 180 85% 60%;
+  --chart-3: 45 95% 60%;
   --chart-4: 250 20% 20%;
   --chart-5: 250 20% 40%;
 
@@ -138,63 +138,6 @@
   --muted-border: hsl(var(--muted));
   --accent-border: hsl(var(--accent));
   --destructive-border: hsl(var(--destructive));
-}
-
-/* DARK THEME — MAGICAL GIRL STARLIGHT */
-.dark {
-  --button-outline: rgba(255, 255, 255, 0.1);
-  --badge-outline: rgba(255, 255, 255, 0.05);
-  --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255, 255, 255, 0.04);
-  --elevate-2: rgba(255, 255, 255, 0.09);
-
-  /* Deep midnight violet */
-  --background: 250 40% 8%; /* hsl(250, 40%, 8%) */
-  --background-h: 250;
-  --background-s: 40%;
-  --background-l: 8%;
-  --foreground: 0 0% 95%; /* near white for contrast */
-  --foreground-h: 0;
-  --foreground-s: 0%;
-  --foreground-l: 95%;
-  --border: 250 20% 15%; /* soft lavender border */
-  --card: 250 20% 12%; /* slightly elevated background */
-  --card-foreground: 0 0% 95%;
-  --card-border: 250 20% 15%;
-  --sidebar: 250 20% 10%; /* even darker sidebar */
-  --sidebar-foreground: 0 0% 95%;
-  --sidebar-border: 250 20% 15%;
-  /* Magical girl starlight accents - vibrant and glowing in dark mode */
-  --primary: 330 85% 65%; /* vibrant pink */
-  --primary-h: 330;
-  --primary-s: 85%;
-  --primary-l: 65%;
-  --secondary: 180 85% 60%; /* electric teal */
-  --secondary-h: 180;
-  --secondary-s: 85%;
-  --secondary-l: 60%;
-  --muted: 250 20% 20%; /* soft lavender muted */
-  --accent: 45 95% 60%; /* star gold */
-  --accent-h: 45;
-  --accent-s: 95%;
-  --accent-l: 60%;
-  --destructive: 0 70% 50%;
-  --input: 0 0% 16%;
-  --ring: 330 85% 65%;
-  --chart-1: 330 85% 65%;
-  --chart-2: 180 85% 60%;
-  --chart-3: 45 95% 60%;
-  --chart-4: 250 20% 20%;
-  --chart-5: 250 20% 40%;
-
-  --shadow-2xs: 0px 2px 0px 0px rgba(0, 0, 0, 0);
-  --shadow-xs: 0px 2px 0px 0px rgba(0, 0, 0, 0);
-  --shadow-sm: 0px 2px 0px 0px rgba(0, 0, 0, 0), 0px 1px 2px -1px rgba(0, 0, 0, 0);
-  --shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0), 0px 1px 2px -1px rgba(0, 0, 0, 0);
-  --shadow-md: 0px 2px 0px 0px rgba(0, 0, 0, 0), 0px 2px 4px -1px rgba(0, 0, 0, 0);
-  --shadow-lg: 0px 2px 0px 0px rgba(0, 0, 0, 0), 0px 4px 6px -1px rgba(0, 0, 0, 0);
-  --shadow-xl: 0px 2px 0px 0px rgba(0, 0, 0, 0), 0px 8px 10px -1px rgba(0, 0, 0, 0);
-  --shadow-2xl: 0px 2px 0px 0px rgba(0, 0, 0, 0);
 }
 
 @layer base {
@@ -324,79 +267,3 @@
     padding-bottom: 64px !important;
   }
 }
-
-/* Theme transition glass blur effect */
-html {
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* Glass blur overlay during theme transition */
-.theme-transition-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(20px);
-  WebkitBackdropFilter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-  z-index: 9999;
-  /* Directional wipe effect */
-  transform: translateX(-100%);
-  transform-origin: left;
-}
-
-body.theme-transitioning .theme-transition-overlay {
-  opacity: 1;
-  transform: translateX(0);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* Direction-specific transitions */
-body.transition-left-to-right .theme-transition-overlay {
-  transform-origin: left;
-  transform: translateX(-100%);
-}
-
-body.transition-left-to-right.theme-transitioning .theme-transition-overlay {
-  transform: translateX(0);
-}
-
-body.transition-right-to-left .theme-transition-overlay {
-  transform-origin: right;
-  transform: translateX(100%);
-}
-
-body.transition-right-to-left.theme-transitioning .theme-transition-overlay {
-  transform: translateX(0);
-}
-
-/* Alternative: Radial sweep effect */
-/*
-.theme-transition-overlay {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  backdrop-filter: blur(20px);
-  WebkitBackdropFilter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
-  z-index: 9999;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-body.theme-transitioning .theme-transition-overlay {
-  opacity: 1;
-  width: 200vw;
-  height: 200vw;
-  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
-}
-*/

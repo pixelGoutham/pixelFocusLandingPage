@@ -27,24 +27,6 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const toggleTheme = () => {
-    // Determine direction based on current theme
-    const isDark = document.documentElement.classList.contains('dark');
-    document.body.classList.remove('transition-left-to-right', 'transition-right-to-left');
-    document.body.classList.add(isDark ? 'transition-left-to-right' : 'transition-right-to-left');
-
-    // Add transitioning class to trigger glass blur overlay
-    document.body.classList.add('theme-transitioning');
-
-    // Toggle dark class on html element
-    document.documentElement.classList.toggle('dark');
-
-    // Remove transitioning class after transition duration
-    setTimeout(() => {
-      document.body.classList.remove('theme-transitioning');
-    }, 500);
-  };
-
   return (
     <AnimatePresence>
       {visible && (
@@ -97,32 +79,6 @@ export default function Navbar() {
               <div style={{ width: "20px", height: "20px", borderRadius: "50%", background: "var(--color-primary)" }} />
               <span style={{ fontWeight: 600 }}>PixelFocus</span>
             </div>
-
-            {/* Theme toggle button */}
-            <button
-              onClick={toggleTheme}
-              style={{
-                background: "none",
-                border: "none",
-                color: "var(--color-muted-foreground)",
-                fontSize: "20px",
-                cursor: "pointer",
-                padding: "4px 8px",
-                borderRadius: "8px",
-                transition: "all 0.2s ease",
-              }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.color = "var(--color-foreground)";
-                e.currentTarget.style.transform = "scale(1.1)";
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.color = "var(--color-muted-foreground)";
-                e.currentTarget.style.transform = "scale(1)";
-              }}
-              aria-label="Toggle theme"
-            >
-              🌓
-            </button>
 
             {/* Nav links — desktop only */}
             <div
