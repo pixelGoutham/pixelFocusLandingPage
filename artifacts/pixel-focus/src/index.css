@@ -226,6 +226,62 @@
   animation-play-state: paused;
 }
 
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reduced transparency preferences */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --background: 250 40% 12%; /* Less transparent background */
+    --primary: 330 85% 55%; /* Less transparent primary */
+    --secondary: 180 85% 50%; /* Less transparent secondary */
+  }
+
+  /* Make translucent surfaces more opaque */
+  [style*="hsla"], [style*="rgba"] {
+    opacity: 0.9 !important;
+  }
+
+  /* Specific fix for navbar backdrop */
+  [style*="backdropFilter"] {
+    background-color: hsla(var(--background-h), var(--background-s), calc(var(--background-l) + 4%)) !important;
+    backdrop-filter: none !important;
+    WebkitBackdropFilter: none !important;
+  }
+}
+
+/* High contrast preferences */
+@media (prefers-contrast: more) {
+  :root {
+    --background: 250 40% 5%; /* Darker background */
+    --foreground: 0 0% 98%; /* Lighter foreground */
+    --primary: 330 85% 70%; /* Brighter primary */
+    --border: 250 20% 25%; /* Stronger border */
+  }
+
+  /* Increase contrast and definition */
+  * {
+    border-width: 1px !important;
+  }
+
+  /* Stronger borders for definition */
+  [class*="border"], [style*="border"] {
+    border-width: 2px !important;
+  }
+
+  /* Ensure text has sufficient contrast */
+  :not(.cta-btn):not([style*="var(--color-primary)"]) {
+    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+  }
+}
+
 /* Yellow glow pulse */
 @keyframes glow-pulse {
   0%, 100% { transform: scale(1.0); opacity: 0.22; }

@@ -19,7 +19,7 @@ export default function Donate() {
         initial={{ opacity: 0, y: 32 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ type: "spring", bounce: 0, duration: 0.7 }}
         style={{ maxWidth: "560px", width: "100%" }}
       >
         {/* Label */}
@@ -87,6 +87,18 @@ export default function Donate() {
           data-testid="donate-btn"
           whileHover={{ scale: 1.03, y: -2 }}
           whileTap={{ scale: 0.97 }}
+          onPointerDown={(e) => {
+            e.currentTarget.style.borderColor = "rgba(205,255,0,0.7)";
+            e.currentTarget.style.boxShadow = "0 0 24px rgba(205,255,0,0.1)";
+          }}
+          onPointerUp={(e) => {
+            e.currentTarget.style.borderColor = "rgba(205,255,0,0.35)";
+            e.currentTarget.style.boxShadow = "none";
+          }}
+          onPointerCancel={(e) => {
+            e.currentTarget.style.borderColor = "rgba(205,255,0,0.35)";
+            e.currentTarget.style.boxShadow = "none";
+          }}
           transition={{ duration: 0.15, ease: "easeOut" }}
           style={{
             display: "inline-flex",
@@ -103,15 +115,6 @@ export default function Donate() {
             letterSpacing: "0.01em",
             textDecoration: "none",
             cursor: "pointer",
-            transition: "border-color 200ms ease, box-shadow 200ms ease",
-          }}
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(205,255,0,0.7)";
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 0 24px rgba(205,255,0,0.1)";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(205,255,0,0.35)";
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
           }}
         >
           {/* Razorpay-style heart icon */}

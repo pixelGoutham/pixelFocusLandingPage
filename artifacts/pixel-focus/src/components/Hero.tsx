@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaWindows } from "react-icons/fa";
 import { SiLinux, SiAndroid } from "react-icons/si";
 
@@ -33,9 +33,9 @@ function HeroH1() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{
-            type: reducedMotion ? "tween" : "spring",
+            type: "spring",
             bounce: 0,
-            duration: reducedMotion ? 0.2 : 0.4,
+            duration: 0.4,
             delay: 0.1 + i * 0.05,
           }}
           style={{
@@ -63,10 +63,9 @@ const platforms = [
 ];
 
 export default function Hero() {
-  const reducedMotion = useReducedMotion();
   const scrollToPlatforms = () => {
     const el = document.getElementById("platforms");
-    if (el) el.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -121,9 +120,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            type: reducedMotion ? "tween" : "spring",
+            type: "spring",
             bounce: 0,
-            duration: reducedMotion ? 0.15 : 0.3,
+            duration: 0.4,
             delay: 0.05,
           }}
           style={{
@@ -174,9 +173,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            type: reducedMotion ? "tween" : "spring",
+            type: "spring",
             bounce: 0,
-            duration: reducedMotion ? 0.2 : 0.4,
+            duration: 0.4,
             delay: 0.38,
           }}
           style={{
@@ -198,9 +197,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            type: reducedMotion ? "tween" : "spring",
+            type: "spring",
             bounce: 0,
-            duration: reducedMotion ? 0.2 : 0.4,
+            duration: 0.4,
             delay: 0.48,
           }}
           style={{
@@ -218,6 +217,15 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               whileTap={{ scale: 0.97 }}
+              onPointerDown={(e) => {
+                e.currentTarget.style.background = "hsla(var(--background-h), var(--background-s), calc(var(--background-l) + 2%))";
+              }}
+              onPointerUp={(e) => {
+                e.currentTarget.style.background = "hsla(var(--background-h), var(--background-s), var(--background-l), 0.03)";
+              }}
+              onPointerCancel={(e) => {
+                e.currentTarget.style.background = "hsla(var(--background-h), var(--background-s), var(--background-l), 0.03)";
+              }}
               data-testid={`hero-platform-${label.toLowerCase()}`}
               style={{
                 display: "flex",
@@ -258,12 +266,24 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           whileTap={{ scale: 0.97 }}
           transition={{
-            type: reducedMotion ? "tween" : "spring",
+            type: "spring",
             bounce: 0,
-            duration: reducedMotion ? 0.2 : 0.4,
+            duration: 0.4,
             delay: 0.56,
           }}
           onClick={scrollToPlatforms}
+          onPointerDown={(e) => {
+            e.currentTarget.style.background = "var(--color-primary)";
+            e.currentTarget.style.color = "var(--color-primary-foreground)";
+          }}
+          onPointerUp={(e) => {
+            e.currentTarget.style.background = "var(--color-primary)";
+            e.currentTarget.style.color = "var(--color-primary-foreground)";
+          }}
+          onPointerCancel={(e) => {
+            e.currentTarget.style.background = "var(--color-primary)";
+            e.currentTarget.style.color = "var(--color-primary-foreground)";
+          }}
           className="cta-btn"
           data-testid="hero-cta"
           style={{
@@ -287,7 +307,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: reducedMotion ? 0 : 2, duration: reducedMotion ? 0.3 : 1 }}
+        transition={{ delay: 2, duration: 1 }}
         style={{
           position: "absolute",
           bottom: "36px",
@@ -301,7 +321,7 @@ export default function Hero() {
       >
         <motion.div
           animate={{ y: [0, 6, 0] }}
-          transition={{ duration: reducedMotion ? 0.3 : 2, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           style={{
             width: "1px",
             height: "40px",

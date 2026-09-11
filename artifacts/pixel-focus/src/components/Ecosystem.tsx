@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 import screenDashboard from "../assets/screen-dashboard.png";
 import screenTasks from "../assets/screen-tasks.png";
 import screenAnalytics from "../assets/screen-analytics.png";
@@ -64,7 +64,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
       initial={{ opacity: 0, x: isEven ? -40 : 40 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
+      transition={{ type: "spring", bounce: 0, duration: 0.4 }}
     >
       <span
         style={{
@@ -113,7 +113,7 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
       initial={{ opacity: 0, x: isEven ? 40 : -40 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
+      transition={{ type: "spring", bounce: 0, duration: 0.4 }}
       style={{ position: "relative" }}
     >
       <div
@@ -178,7 +178,6 @@ function FeatureRow({ feature, index }: FeatureRowProps) {
 }
 
 export default function Ecosystem() {
-  const reducedMotion = useReducedMotion();
   return (
     <section
       id="features"
@@ -199,7 +198,7 @@ export default function Ecosystem() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
+          transition={{ type: "spring", bounce: 0, duration: 0.4 }}
           style={{
             maxWidth: "1100px",
             margin: "0 auto",

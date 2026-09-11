@@ -1,7 +1,6 @@
-import { motion, useReducedMotion } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Problem() {
-  const reducedMotion = useReducedMotion();
   return (
     <section
       id="problem"
@@ -21,7 +20,7 @@ export default function Problem() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ type: reducedMotion ? "tween" : "spring", bounce: 0, duration: reducedMotion ? 0.2 : 0.4 }}
+          transition={{ type: "spring", bounce: 0, duration: 0.4 }}
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "clamp(24px, 4.5vw, 52px)",
