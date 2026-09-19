@@ -7,19 +7,19 @@ const platforms = [
     icon: FaWindows,
     name: "Windows",
     desc: "Windows 10 and above",
-    href: "https://drive.google.com/file/d/1CaZsuIty3CU9Jj3P-WIb13qnnBo8kPic/view?usp=sharing",
+    href: "https://github.com/pixelGoutham/pixelFocusApp/releases",
   },
   {
     icon: SiLinux,
     name: "Linux",
     desc: "Debian / Ubuntu / Arch",
-    href: "https://drive.google.com/file/d/1YqD2qvedqHKM1Pvc99YBOGOEWjblrfoj/view?usp=drive_link",
+    href: "https://github.com/pixelGoutham/pixelFocusApp/releases",
   },
   {
     icon: SiAndroid,
     name: "Android",
     desc: "Android 8.0 and above",
-    href: "https://drive.google.com/file/d/1lKYQ9wCUWeA6jMYMALaaqYw-tXGF9xEQ/view?usp=sharing",
+    href: "https://github.com/pixelGoutham/pixelFocusApp/releases",
   },
 ];
 
