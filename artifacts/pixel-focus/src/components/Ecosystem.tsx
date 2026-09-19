@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import screenDashboard from "../assets/screen-dashboard.png";
-import screenTasks from "../assets/screen-tasks.png";
+import screenTasks from "../assets/matrix.png";
 import screenAnalytics from "../assets/screen-analytics.png";
 import screenPomodoro from "../assets/screen-pomodoro.png";
 import screenMockTests from "../assets/screen-mock-tests.png";
