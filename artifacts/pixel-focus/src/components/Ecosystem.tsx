@@ -37,9 +37,9 @@ const features = [
   },
   {
     num: "05",
-    name: "Mock Tests",
-    headline: "Test yourself before the exam does.",
-    body: "Log every practice test result. Track your average over time. Know which subjects need more reps before it's too late.",
+    name: "ACADEMIC DAMAGE",
+    headline: "Too much trauma. Too little sleep.",
+    body: "And somehow, there's another exam tomorrow.",
     img: screenMockTests,
   },
   {

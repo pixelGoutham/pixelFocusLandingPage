@@ -3,9 +3,9 @@ import { FaWindows } from "react-icons/fa";
 import { SiLinux, SiAndroid } from "react-icons/si";
 
 const platforms = [
-  { icon: FaWindows, label: "Windows", href: "https://drive.google.com/file/d/1CaZsuIty3CU9Jj3P-WIb13qnnBo8kPic/view?usp=sharing" },
-  { icon: SiLinux, label: "Linux", href: "https://drive.google.com/file/d/1YqD2qvedqHKM1Pvc99YBOGOEWjblrfoj/view?usp=drive_link" },
-  { icon: SiAndroid, label: "Android", href: "https://drive.google.com/file/d/1lKYQ9wCUWeA6jMYMALaaqYw-tXGF9xEQ/view?usp=sharing" },
+  { icon: FaWindows, label: "Windows", href: "https://github.com/pixelGoutham/pixelFocusApp/releases" },
+  { icon: SiLinux, label: "Linux", href: "https://github.com/pixelGoutham/pixelFocusApp/releases" },
+  { icon: SiAndroid, label: "Android", href: "https://github.com/pixelGoutham/pixelFocusApp/releases" },
 ];
 
 export default function ThePromise() {
