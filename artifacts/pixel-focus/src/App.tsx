@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 import LandingPage from '@/pages/LandingPage';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
@@ -10,6 +11,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={LandingPage} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route component={NotFound} />
     </Switch>
   );
