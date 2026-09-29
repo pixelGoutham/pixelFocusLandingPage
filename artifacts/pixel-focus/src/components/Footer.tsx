@@ -130,6 +130,27 @@ export default function Footer() {
         >
           &copy; {year} Pixel Focus. All rights reserved.
         </span>
+        <a
+          href="/privacy-policy"
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: "11px",
+            color: "var(--color-muted-foreground)",
+            textDecoration: "none",
+            marginLeft: "12px",
+          }}
+          onPointerDown={(e) => {
+            e.currentTarget.style.color = "var(--color-primary)";
+          }}
+          onPointerUp={(e) => {
+            e.currentTarget.style.color = "var(--color-muted-foreground)";
+          }}
+          onPointerCancel={(e) => {
+            e.currentTarget.style.color = "var(--color-muted-foreground)";
+          }}
+        >
+          Privacy Policy
+        </a>
         <span
           style={{
             fontFamily: "'Inter', sans-serif",
